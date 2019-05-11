@@ -1,0 +1,353 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #212529;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .85);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .85);
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #111;
+  position: relative;
+  font-family: 'Jura', sans-serif;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+.center-vert {
+  vertical-align: center;
+  direction: flex;
+  align-content: center;
+}
+
+.center-logo {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: center;
+}
+
+.date {
+  font-size: 44px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'srfm_neon';
+    src: url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.ttf') format('truetype');
+    src: url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.eot?#iefix') format('embedded-opentype'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.woff2') format('woff2'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.woff') format('woff'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.eot') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+main#main.main {
+  background-size: 100% auto;
+  min-height: 100vh;
+  font-family: 'srfm_neon';
+  color: #ffffff;
+  overflow: auto;
+  position: relative;
+}
+
+.main .image-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.main .container {
+  position: relative;
+  height: calc(100vh - 115px);
+  padding-top: 3%;
+  padding-left: 4%;
+  overflow: hidden;
+}
+
+.container .bottom-img {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.container #bottom-header {
+  text-align: right;
+  position: absolute;
+  bottom: 6%;
+  right: 10%;
+  z-index: 2;
+}
+
+.main h1 {
+  font-size: 4.5rem;
+  font-family: 'srfm_neon';
+  src: url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.ttf') format('truetype');
+  src: url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.eot?#iefix') format('embedded-opentype'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.woff2') format('woff2'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.woff') format('woff'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.eot') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main h2 {
+  font-size: 3.5rem;
+  font-family: 'srfm_neon';
+  src: url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.ttf') format('truetype');
+  src: url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.eot?#iefix') format('embedded-opentype'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.woff2') format('woff2'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.woff') format('woff'),url('https://www.plaisio-cdn.gr/images/promo/20190211-love-gifts-assets/fonts/srfmneon.eot') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main a {
+  color: inherit;
+  display: inline-block;
+  transition: none!important;
+}
+
+.main a:hover {
+  text-decoration: none;
+  color: inherit!important;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;
+}
+
+.glow-header {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;
+}
+
+.glow {
+  animation: glow 47s infinite;
+}
+
+@keyframes glow {
+  0% {text-shadow: none;}
+  1% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;}
+  2% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;}
+  10% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;}
+  20% {text-shadow: none;}
+  22% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;}
+  70% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;}
+  75% {text-shadow: none;}
+  80% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;}
+  81% {text-shadow: none;}
+  85% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;}
+  100% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;}
+}
+
+.glow-pink {
+  animation-name: glow-pink;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow-pink {
+  0% {text-shadow: none;}
+  1% {text-shadow: 0 0 5px #ff6e7d, 0 0 10px #ff6e7d, 0 0 20px #ff6e7d, 0 0 30px #ff6e7d, 0 0 40px #ff6e7d, 0 0 55px #ff6e7d, 0 0 75px #ff6e7d;}
+  2% {text-shadow: 0 0 5px #ff6e7d, 0 0 10px #ff6e7d, 0 0 20px #ff6e7d, 0 0 30px #ff6e7d, 0 0 40px #ff6e7d, 0 0 55px #ff6e7d, 0 0 75px #ff6e7d;}
+  10% {text-shadow: 0 0 5px #ff6e7d, 0 0 10px #ff6e7d, 0 0 20px #ff6e7d, 0 0 30px #ff6e7d, 0 0 40px #ff6e7d, 0 0 55px #ff6e7d, 0 0 75px #ff6e7d;}
+  20% {text-shadow: none;}
+  30% {text-shadow: 0 0 5px #ff6e7d, 0 0 10px #ff6e7d, 0 0 20px #ff6e7d, 0 0 30px #ff6e7d, 0 0 40px #ff6e7d, 0 0 55px #ff6e7d, 0 0 75px #ff6e7d;}
+  70% {text-shadow: 0 0 5px #ff6e7d, 0 0 10px #ff6e7d, 0 0 20px #ff6e7d, 0 0 30px #ff6e7d, 0 0 40px #ff6e7d, 0 0 55px #ff6e7d, 0 0 75px #ff6e7d;}
+  75% {text-shadow: none;}
+  80% {text-shadow: 0 0 5px #ff6e7d, 0 0 10px #ff6e7d, 0 0 20px #ff6e7d, 0 0 30px #ff6e7d, 0 0 40px #ff6e7d, 0 0 55px #ff6e7d, 0 0 75px #ff6e7d;}
+  81% {text-shadow: none;}
+  85% {text-shadow: 0 0 5px #ff6e7d, 0 0 10px #ff6e7d, 0 0 20px #ff6e7d, 0 0 30px #ff6e7d, 0 0 40px #ff6e7d, 0 0 55px #ff6e7d, 0 0 75px #ff6e7d;}
+  100% {text-shadow: 0 0 5px #ff6e7d, 0 0 10px #ff6e7d, 0 0 20px #ff6e7d, 0 0 30px #ff6e7d, 0 0 40px #ff6e7d, 0 0 55px #ff6e7d, 0 0 75px #ff6e7d;}
+}
+
+.glow-yellow {
+  animation-name: glow-yellow;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow-yellow {
+  0% {text-shadow: none;}
+  1% {text-shadow: 0 0 5px #fffe00, 0 0 10px #fffe00, 0 0 20px #fffe00, 0 0 30px #fffe00, 0 0 40px #fffe00, 0 0 55px #fffe00, 0 0 75px #fffe00;}
+  2% {text-shadow: 0 0 5px #fffe00, 0 0 10px #fffe00, 0 0 20px #fffe00, 0 0 30px #fffe00, 0 0 40px #fffe00, 0 0 55px #fffe00, 0 0 75px #fffe00;}
+  10% {text-shadow: 0 0 5px #fffe00, 0 0 10px #fffe00, 0 0 20px #fffe00, 0 0 30px #fffe00, 0 0 40px #fffe00, 0 0 55px #fffe00, 0 0 75px #fffe00;}
+  20% {text-shadow: none;}
+  30% {text-shadow: 0 0 5px #fffe00, 0 0 10px #fffe00, 0 0 20px #fffe00, 0 0 30px #fffe00, 0 0 40px #fffe00, 0 0 55px #fffe00, 0 0 75px #fffe00;}
+  70% {text-shadow: 0 0 5px #fffe00, 0 0 10px #fffe00, 0 0 20px #fffe00, 0 0 30px #fffe00, 0 0 40px #fffe00, 0 0 55px #fffe00, 0 0 75px #fffe00;}
+  75% {text-shadow: none;}
+  80% {text-shadow: 0 0 5px #fffe00, 0 0 10px #fffe00, 0 0 20px #fffe00, 0 0 30px #fffe00, 0 0 40px #fffe00, 0 0 55px #fffe00, 0 0 75px #fffe00;}
+  81% {text-shadow: none;}
+  85% {text-shadow: 0 0 5px #fffe00, 0 0 10px #fffe00, 0 0 20px #fffe00, 0 0 30px #fffe00, 0 0 40px #fffe00, 0 0 55px #fffe00, 0 0 75px #fffe00;}
+  100% {text-shadow: 0 0 5px #fffe00, 0 0 10px #fffe00, 0 0 20px #fffe00, 0 0 30px #fffe00, 0 0 40px #fffe00, 0 0 55px #fffe00, 0 0 75px #fffe00;}
+}
+
+@media (max-width: 1440px) {
+ .main h1 {
+    font-size: 3.8rem;
+  }
+  .main h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #bottom-header,
+  .container .bottom-img{
+    position: static!important;
+    text-align: right!important;
+  }
+
+  .container .bottom-img {
+    display: block!important;
+    margin-left: auto!important;
+  }
+
+  #bottom-header {
+    margin-right: 20px!important;
+  }
+}
+
+@media (max-width: 610px) {
+  .main .container {
+    height: calc(100vh - 50px);
+  }
+}
+
+@media (max-width: 430px) {
+  .main h1 {
+    font-size: 2.7rem;
+  }
+  .main h2 {
+    font-size: 1.8rem;
+  }
+  .main .bottom-img {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 360px) {
+  .main h1 {
+    font-size: 2.2rem;
+  }
+  .main h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .main h1 {
+    font-size: 1.9rem;
+  }
+  .main h2 {
+    font-size: 1.3rem;
+  }
+  .main .bottom-img {
+    max-width: 20%;
+  }
+}
